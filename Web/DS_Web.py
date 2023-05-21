@@ -1,3 +1,4 @@
+import base64
 import io
 import logging
 import webbrowser
@@ -129,7 +130,7 @@ def index():
         im2_pil.save(buffer, format='JPEG')
         encoded_string = base64.b64encode(buffer.getvalue()).decode('utf-8')
 
-        with open('out.txt', 'r', encoding='utf-8') as f:
+        with open('out', 'r', encoding='utf-8') as f:
             content = f.read()
         # 返回图像文件内容
         return render_template('result.html', image_data=encoded_string, result=content)
