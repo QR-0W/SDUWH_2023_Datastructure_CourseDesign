@@ -43,7 +43,7 @@ def text_detection_SLOW(img):
     # 设置字体
     font_path = 'Fonts/msyhl.ttc'
     # 设置字体大小
-    msyhl_font = ImageFont.truetype(font_path, size=30)
+    msyhl_font = ImageFont.truetype(font_path, size=50)
 
     # 创建一个半透明图层
     draw = ImageDraw.Draw(image_pil)
